@@ -1,0 +1,237 @@
+/* Estilos generales */
+* {
+    margin: 0px; /* Elimina el margen exterior */
+    padding: 0px; /* Elimina el relleno */
+    font-family: Arial, Helvatica, sans-serif; /* Define la fuente de texto predeterminada */
+    text-decoration: none; /* Elimina la decoración de texto predeterminada */
+}
+
+p, h2, h3, ul {
+    margin-top: 5px; /* Espacio entre el texto y el borde superior */
+    margin-bottom: 5px; /* Espacio entre el texto y el borde inferior */
+}
+ul, ol {
+    margin-left: 30px; /* Espacio entre el texto y la lista */
+    margin-bottom: 20px; /* Espacio entre la lista y el borde inferior */
+}
+
+.clearflix {
+    clear: both;
+    float: none; /* Elimina el posicionamiento flotante */
+}
+
+/* Estilos del cuerpo */
+body {
+    background-color: #f2f2f2; /* Establece el color de fondo */
+}
+
+/* Estilos de la cabecera */
+header {
+    width: 1212px; /* Ancho de la cabecera */
+    height: 140px; /* Altura de la cabecera */
+    background-color: #23282b; /* Color de fondo de la cabecera */
+    margin: 0px auto; /* Centra horizontalmente la cabecera */
+}
+
+/* Estilos del logotipo */
+#logotipo {
+    width: 40%; /* Ancho del logotipo */
+    height: 130px; /* Altura del logotipo */
+    margin: 0px auto; /* Centra horizontalmente el logotipo */
+    padding-top: 10px; /* Espaciado superior del logotipo */
+}
+
+/* Estilos del logotipo (imagen) */
+#logotipo img {
+    display: block; /* Hace que la imagen sea un elemento de bloque */
+    width: 60px; /* Ancho de la imagen */
+    float: left; /* Flota la imagen a la izquierda */
+    margin-top: 20px; /* Espaciado superior de la imagen */
+}
+
+/* Estilos del logotipo (texto) */
+#logotipo h1 {
+    display: block; /* Hace que el texto sea un elemento de bloque */
+    float: left; /* Flota el texto a la izquierda */
+    margin-top: 35px; /* Espaciado superior del texto */
+    margin-left: 20px; /* Espaciado izquierdo del texto */
+    letter-spacing: 2px; /* Espaciado entre caracteres */
+    font-weight: lighter; /* Grosor de fuente */
+    color: #2ba977; /* Color del texto */
+}
+
+/* Estilos de la barra de navegación */
+nav {
+    width: 1250px; /* Ancho de la barra de navegación */
+    height: 50px; /* Altura de la barra de navegación */
+    background-color: #1b1e1f; /* Color de fondo de la barra de navegación */
+    border: 1px solid #333333; /* Borde de la barra de navegación */
+    margin: 0 auto; /* Centra horizontalmente la barra de navegación */
+    box-shadow: 0px 22px 22px gray; /* Sombra */
+    font-size: 15px; /* Tamaño de fuente */
+    margin-bottom: 45px; /* Espaciado inferior */
+}
+
+/* Estilos de la lista no ordenada dentro de la barra de navegación */
+nav ul {
+    list-style: none; /* Elimina los marcadores de lista */
+    text-decoration: none; /* Corregido: Establece la decoración de texto */
+}
+
+/* Estilos de los elementos de lista dentro de la barra de navegación */
+nav ul li {
+    line-height: 40px; /* Altura de línea */
+    float: left; /* Flota los elementos de la lista a la izquierda */
+}
+
+/* Estilos de los enlaces dentro de la barra de navegación */
+nav ul li a {
+    display: block; /* Hace que los enlaces sean elementos de bloque */
+    padding-left: 15px; /* Espaciado izquierdo */
+    padding-right: 15px; /* Espaciado derecho */
+    color: #d1d4d6; /* Color del texto */
+}
+
+/* Estilos de los enlaces cuando se pasa el cursor sobre ellos */
+nav ul li a:hover {
+    background: #2ba977; /* Color de fondo al pasar el cursor */
+    box-shadow: 0px 0px 5px #444444 inset; /* Sombra interna */
+    color: white; /* Color del texto */
+    transition: all 300ms; /* Transición de animación */
+}
+
+/* Estilos para el contenido central */
+#content {
+    width: 1212px; /* Ancho del contenido */
+    min-height: 930px; /* Altura mínima del contenido */
+    margin: 0 auto; /* Centra horizontalmente el contenido */
+    margin-bottom: 30px; /* Espaciado inferior */
+    margin-top: 40px; /* Espaciado superior */
+}
+
+/* Estilos para la caja de contenido */
+.box {
+    background: white; /* Color de fondo */
+    min-height: 930px; /* Altura mínima */
+    width: 95%; /* Ancho */
+    padding: 20px; /* Relleno */
+    border: 1px solid #ddd; /* Borde */
+    border-radius: 2px; /* Radio de borde */
+    margin: 0 auto; /* Centra horizontalmente */
+}
+.box form{
+    width: 100%;
+}
+
+.box form input, .box form label{
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+    
+}
+    
+.box form input [type="text"],
+.box form textarea,
+.box form select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.box form select {
+    width: 70px;
+    padding: 5px;
+}
+
+.box form input [type="submit"],
+.box form input [type="button"],
+.box form button {
+    padding: 10px;
+    margin-top: 5px;
+    background: #1f7e5;
+    border: 1px solid #1f7e5;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.box form input [type="submit"]:hover,
+.box form input [type="button"]:hover,
+.box form button:hover {
+    cursor: pointer;
+    background: #125688;
+}
+
+.rojo {
+    color: red;
+    box-shadow: 0 0 10px black;
+}
+
+.messague {
+    padding: 10px;
+    background: #1f7e5;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el título */
+.title {
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+article-item {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    border-button: 1px solid #eee;
+    crear: both;
+}
+
+.article-item.image {
+    width: 200px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+}
+
+.article-item.image img {
+    height: 200px;
+}
+
+.article-item.data {
+    float: left;
+    padding: 15px;
+    padding-top: 0px;
+}
+
+.article-item h2 {
+    display: block;
+    font-size: 25px;
+    color: #12568;
+    margin-bottom: 10px;
+}
+
+.article-item span.date {
+    display: block;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    width: 100%;
+    background-color: #1b1e1f;
+    border: 1px solid #333333;
+    color: #d1d4d6;
+    text-align: center;
+    padding-top: 20px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 20px gray;
+}

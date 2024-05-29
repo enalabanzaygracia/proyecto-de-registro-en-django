@@ -1,0 +1,25 @@
+{% extends 'layout/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <h1 class="title">{{ title }}</h1>
+    {% for article in articles %}
+        <article class="article-item">
+            {% if article.image != 'null' %}
+                <div class="image">
+                    <img src="{{ article.image.url }}" />
+                </div>
+            {%e endif %}
+
+
+            <div class="data">
+                <h2>{{ article.title }}</h2>
+
+                <span class="date">{{article.created_at|date:"d/m/Y"}}</span>
+                <p>
+                    {{article.content | safe }} 
+                    <a href="{% url 'borrar' article.id %}"
+                </p>
+
+    {% endblock %}

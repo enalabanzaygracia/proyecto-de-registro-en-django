@@ -1,0 +1,16 @@
+{% extends 'layout/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+{% for p in pages %}
+    <div>
+        <h2>{{ p.1 }}</h2>  <!-- Título de la página -->
+        <p>ID: {{ p.0 }}</p>  <!-- ID de la página -->
+        <p>Slug: {{ p.2 }}</p>  <!-- Slug de la página -->
+    </div>
+{% endfor %}
+
+{% endblock %}

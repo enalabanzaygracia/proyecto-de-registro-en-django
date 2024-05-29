@@ -1,0 +1,76 @@
+{% load static %} <!-- Cargar archivos estáticos -->
+
+<!DOCTYPE html>
+<html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">        
+        <title>
+            {% block title %}   
+                <!-- Se utiliza EXTENDS para permitir que cada página herede el título de la plantilla base. -->
+                <!-- Se utiliza BLOCK para permitir que cada página individual defina su propio título personalizado. -->
+            {% endblock %}
+                <!-- Título de cada página en concreto -->
+                Sitio Web | ADSO - SENA
+        </title>
+        {%load static%}  <!-- carga ficheros estaticos -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}"> <!-- Carga el archivo CSS -->
+
+    
+    </head>
+    
+    <body>
+        <!-- Cabecera principal de la página -->
+        <header>
+            <div id="logotipo"> <!-- Se utiliza ID porque será algo que estará solo una vez en la página -->
+                <!-- Logo de Django -->
+                <img src="{% static 'images/django.png' %}" alt="Logo Django jesus andres salazar">
+                <h1>Bienvenido a mi sitio web</h1> <!-- Encabezado principal -->
+                <h2> Sitio WEB con Django por Jesus Andres Salazar | ADSO - SENA</h2> <!-- Subtítulo -->
+            </div>
+        </header>  
+
+        <!-- Barra de navegación -->
+        <nav>
+            <hr/> <!-- Línea horizontal -->
+            <ul>
+                <li>
+                    <a href="{% url 'inicio' %} ">Inicio </a> <!-- Enlace a la página de inicio -->
+                </li>  
+                <li>
+                    <a href="{% url 'articulos' %} ">Articulos </a> <!-- Enlace a la página de artículos -->
+                </li> 
+                <li>
+                    <a href="{% url 'create' %} ">Crear Articulos </a> <!-- Enlace a la página de creación de artículos -->
+                </li> 
+
+                <li>
+                    <a href="{% url 'create_full' %} ">Crear Articulos clases </a> <!-- Enlace a la página de creación de artículos -->
+                </li> 
+
+                <li>
+                    <a href="{% url 'hola_mundo' %} ">Hola mundo </a> <!-- Enlace a la página de hola mundo -->
+                </li> 
+                <li>
+                    <a href="{% url 'pagina' %} ">Pagina WEB </a> <!-- Enlace a la página web -->
+                </li> 
+            </ul>
+            <hr/> <!-- Línea horizontal -->
+        </nav>
+        
+        <!-- Contenido principal -->
+        <main>
+            <div class="box"> <!-- Caja de contenido -->
+                <h2 class="title">Titulo de la prueba</h2> <!-- Título de la prueba -->
+                {% block content %} <!-- Bloque de contenido -->
+                    <strong> Contenido de la página original </strong> <!-- Contenido predeterminado -->
+                {% endblock %}
+            </div>
+        </main>
+
+        <!-- Pie de página -->
+        <footer>
+            CURSO DE DJANGO - SENA 2024 &copy; Todos los derechos reservados jesus Andres Salazar - {% now "d/m/y h:m:s"%} <!-- Información del pie de página -->
+        </footer> 
+    </body>
+    </html>

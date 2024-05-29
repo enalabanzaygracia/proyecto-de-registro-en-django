@@ -1,0 +1,14 @@
+{% extends 'layout/layout.html' %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block content %}
+<h1 class = "titlee" >{{ page.title }}</h1>
+
+<span class = "date">{{ page.create_at}}</span>
+
+<p class>{{ page.content }}</p>
+
+
+
+{% endblock %}
